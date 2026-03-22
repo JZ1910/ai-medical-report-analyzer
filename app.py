@@ -8,7 +8,7 @@ import PyPDF2
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
 # Load dataset
-df = pd.read_csv("data/medical_terms.csv")
+df = pd.read_csv("medical_terms.csv")
 
 # Create embeddings for terms
 term_embeddings = model.encode(df["term"].tolist())
